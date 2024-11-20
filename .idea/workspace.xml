@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="65c986d1-e9ae-4431-9f49-4a09ac39d244" name="更改" comment="">
+      <change beforePath="$PROJECT_DIR$/数据采集/original_files/entities/comment.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据采集/original_files/entities/concept.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据采集/original_files/entities/course.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据采集/original_files/entities/other.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据采集/original_files/entities/paper.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据采集/original_files/entities/problem.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据采集/original_files/entities/reply.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据采集/original_files/entities/school.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据采集/original_files/entities/teacher.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据采集/original_files/entities/user.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据采集/original_files/entities/video.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据采集/original_files/prerequisites/cs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据采集/original_files/prerequisites/math.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据采集/original_files/prerequisites/psy.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据采集/original_files/relations/comment-reply.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据采集/original_files/relations/concept-comment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据采集/original_files/relations/concept-other.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据采集/original_files/relations/concept-paper.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据采集/original_files/relations/concept-problem.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据采集/original_files/relations/concept-video.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据采集/original_files/relations/course-comment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据采集/original_files/relations/course-field.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据采集/original_files/relations/course-school.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据采集/original_files/relations/course-teacher.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据采集/original_files/relations/exercise-problem.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据采集/original_files/relations/reply-reply.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据采集/original_files/relations/user-comment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据采集/original_files/relations/user-problem.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据采集/original_files/relations/user-reply.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据采集/original_files/relations/user-video.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据采集/original_files/relations/user-xiaomu.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据采集/original_files/relations/video_id-ccid.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据采集/txt_files/entities/comment.json.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据采集/txt_files/entities/concept.json.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据采集/txt_files/entities/course.json.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据采集/txt_files/entities/other.json.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据采集/txt_files/entities/paper.json.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据采集/txt_files/entities/problem.json.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据采集/txt_files/entities/reply.json.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据采集/txt_files/entities/school.json.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据采集/txt_files/entities/teacher.json.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据采集/txt_files/entities/user.json.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据采集/txt_files/entities/video.json.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据采集/txt_files/prerequisites/cs.json.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据采集/txt_files/prerequisites/math.json.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据采集/txt_files/prerequisites/psy.json.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据采集/txt_files/relations/comment-reply.txt.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据采集/txt_files/relations/concept-comment.txt.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据采集/txt_files/relations/concept-other.txt.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据采集/txt_files/relations/concept-paper.txt.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据采集/txt_files/relations/concept-problem.txt.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据采集/txt_files/relations/concept-video.txt.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据采集/txt_files/relations/course-comment.txt.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据采集/txt_files/relations/course-field.json.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据采集/txt_files/relations/course-school.txt.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据采集/txt_files/relations/course-teacher.txt.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据采集/txt_files/relations/exercise-problem.txt.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据采集/txt_files/relations/reply-reply.txt.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据采集/txt_files/relations/user-comment.txt.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据采集/txt_files/relations/user-problem.json.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据采集/txt_files/relations/user-reply.txt.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据采集/txt_files/relations/user-video.json.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据采集/txt_files/relations/user-xiaomu.json.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数据采集/txt_files/relations/video_id-ccid.txt.txt" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="2p7VjxvebWZwhssrkCujKqdjqDD" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.MOOC.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/dususu/LeetCode",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-PY-242.23339.19" />
+        <option value="bundled-python-sdk-0029f7779945-399fe30bd8c1-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-242.23339.19" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="65c986d1-e9ae-4431-9f49-4a09ac39d244" name="更改" comment="" />
+      <created>1732117239286</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1732117239286</updated>
+      <workItem from="1732117240312" duration="1840000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/LeetCode$MOOC.coverage" NAME="MOOC 覆盖结果" MODIFIED="1732118623266" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/数据采集" />
+  </component>
+</project>
