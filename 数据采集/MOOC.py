@@ -60,7 +60,7 @@ def download_file(url, original_path, txt_path, max_size_mb):
         total_size_mb = int(response.headers.get("Content-Length", 0)) / (1024 * 1024)
         if total_size_mb > max_size_mb:
             print(f"Skipping {url}: file size {total_size_mb:.2f} MB exceeds {max_size_mb} MB")
-            return
+            return False
 
         # 保存原始文件
         os.makedirs(os.path.dirname(original_path), exist_ok=True)
@@ -79,13 +79,17 @@ def download_file(url, original_path, txt_path, max_size_mb):
             txt_file.write(content)
 
         print(f"Saved as TXT: {txt_path}")
+        return True
 
     except requests.RequestException as e:
         print(f"Failed to download {url}: {e}")
+        return False
     except Exception as e:
         print(f"Error processing file {original_path}: {e}")
+        return False
 
 # 主逻辑
+failed_files = []  # 记录失败的文件
 for file_path in files:
     url = f"{base_url}{file_path}"
 
@@ -95,4 +99,14 @@ for file_path in files:
     txt_path = os.path.join("txt_files", category, os.path.basename(file_path) + ".txt")
 
     print(f"Downloading {file_path} ...")
-    download_file(url, original_path, txt_path, max_size_mb=10)  # 最大文件大小限制为 50MB
+    success = download_file(url, original_path, txt_path, max_size_mb=50)  # 最大文件大小限制为 50MB
+    if not success:
+        failed_files.append(file_path)
+
+# 打印失败的文件
+if failed_files:
+    print("\nThe following files failed to download:")
+    for failed in failed_files:
+        print(failed)
+else:
+    print("\nAll files downloaded successfully!")
