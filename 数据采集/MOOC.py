@@ -1,7 +1,7 @@
 import os
 import requests
 
-# 定义文件列表
+# 文件列表
 files = [
     "entities/reply.json",
     "entities/video.json",
@@ -41,42 +41,38 @@ files = [
 base_url = "https://lfs.aminer.cn/misc/moocdata/data/mooccube2/"
 
 # 确保目录存在
-base_directories = ["original_files", "txt_files"]
-sub_directories = ["entities", "relations", "prerequisites"]
-
-# 创建基础目录结构
-for base_dir in base_directories:
-    for sub_dir in sub_directories:
-        os.makedirs(os.path.join(base_dir, sub_dir), exist_ok=True)
+directories = ["original_files", "txt_files"]
+for directory in directories:
+    os.makedirs(directory, exist_ok=True)
 
 # 下载文件
-def download_file(url, original_path, txt_path, max_size_mb):
-    """下载文件并限制最大文件大小，同时保存为 .txt"""
+def download_file(url, original_path, txt_path, max_download_mb, timeout=300):
+    """下载文件限制为前 max_download_mb MB"""
     try:
-        response = requests.get(url, stream=True, timeout=30)
+        response = requests.get(url, stream=True, timeout=timeout)
         response.raise_for_status()
 
-        # 获取内容大小
-        total_size_mb = int(response.headers.get("Content-Length", 0)) / (1024 * 1024)
-        if total_size_mb > max_size_mb:
-            print(f"Skipping {url}: file size {total_size_mb:.2f} MB exceeds {max_size_mb} MB")
-            return False
-
-        # 保存原始文件
+        # 流式下载文件的前 max_download_mb MB
+        downloaded_size = 0
+        max_download_bytes = max_download_mb * 1024 * 1024
         os.makedirs(os.path.dirname(original_path), exist_ok=True)
+
         with open(original_path, "wb") as original_file:
             for chunk in response.iter_content(chunk_size=8192):
+                if downloaded_size + len(chunk) > max_download_bytes:
+                    # 剩余部分不够一个 chunk 的情况
+                    original_file.write(chunk[:max_download_bytes - downloaded_size])
+                    break
                 original_file.write(chunk)
+                downloaded_size += len(chunk)
 
-        print(f"Saved original: {original_path}")
+        print(f"Saved first {max_download_mb} MB: {original_path}")
 
         # 保存为文本文件
-        with open(original_path, "r", encoding="utf-8") as original_file:
-            content = original_file.read()
-
         os.makedirs(os.path.dirname(txt_path), exist_ok=True)
         with open(txt_path, "w", encoding="utf-8") as txt_file:
-            txt_file.write(content)
+            with open(original_path, "r", encoding="utf-8") as original_file:
+                txt_file.write(original_file.read())
 
         print(f"Saved as TXT: {txt_path}")
         return True
@@ -89,21 +85,19 @@ def download_file(url, original_path, txt_path, max_size_mb):
         return False
 
 # 主逻辑
-failed_files = []  # 记录失败的文件
+failed_files = []
 for file_path in files:
     url = f"{base_url}{file_path}"
-
-    # 根据文件路径分类
-    category = file_path.split("/")[0]  # 提取文件夹名称（entities、relations、prerequisites）
+    category = file_path.split("/")[0]
     original_path = os.path.join("original_files", category, os.path.basename(file_path))
     txt_path = os.path.join("txt_files", category, os.path.basename(file_path) + ".txt")
 
     print(f"Downloading {file_path} ...")
-    success = download_file(url, original_path, txt_path, max_size_mb=50)  # 最大文件大小限制为 50MB
+    success = download_file(url, original_path, txt_path, max_download_mb=10, timeout=300)
     if not success:
         failed_files.append(file_path)
 
-# 打印失败的文件
+# 打印结果
 if failed_files:
     print("\nThe following files failed to download:")
     for failed in failed_files:
